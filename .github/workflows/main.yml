@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Lint code
-        run: ls
+        run: l
 
       - name: Run unit tests
         run: echo "complete the github test"
