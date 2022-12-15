@@ -1,1 +1,1 @@
-# github-actions-kt
+# github-actions-integration-template
