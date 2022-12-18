@@ -10,7 +10,11 @@ apt-cache policy docker-ce
 sudo apt install docker-ce -y
 sudo systemctl status docker
 
-sudo usermod -aG docker ubuntu
+# To install docker compose
+sudo apt install docker-compose
+
+# Add user into docker group
+sudo usermod -aG docker ubuntu/cloud
 newgrp docker
 
 ## Aws cli installation
@@ -18,6 +22,11 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 sudo apt install unzip
 unzip awscliv2.zip
 sudo ./aws/install
+
+## Setup Google Cloud
+curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-409.0.0-linux-x86_64.tar.gz
+tar -xf google-cloud-cli-409.0.0-linux-x86_64.tar.gz
+./google-cloud-sdk/install.sh --path-update true
 
 ## Github Runner configuration
 mkdir actions-runner && cd actions-runner
