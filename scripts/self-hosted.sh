@@ -18,7 +18,7 @@ sudo systemctl status docker
 sudo apt install docker-compose
 
 # Add user into docker group
-sudo usermod -aG docker ubuntu/cloud
+sudo usermod -aG docker ubuntu/cloud (or)  --> sudo usermod -aG docker deepakyadav540official
 newgrp docker
 
 ## Aws cli installation
